@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="app">
+    <h4 class="mb-3">Meine Liste</h4>
+
+    <div id="addNew" data-bs-toggle="modal" data-bs-target="#neueAufgabe">
+      <span>Neue Aufgabe</span>
+      <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Modal um neue Aufgabe hinzuzufügen -->
+    <form class="modal fade" id="neueAufgabe" tabindex="-1" aria-labelledby="neueAufgabeLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="neueAufgabeLabel">Neue Aufgabe hinzufügen</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="titelInput" class="form-label">Titel</label>
+              <input type="text" class="form-control" id="titelInput">
+            </div>
+            <div class="mb-3">
+              <label for="startdatumInput" class="form-label">Startdatum</label>
+              <input type="date" class="form-control" id="startdatumInput">
+            </div>
+            <div class="mb-3">
+              <label for="enddatumInput" class="form-label">Enddatum</label>
+              <input type="date" class="form-control" id="enddatumInput">
+            </div>
+            <div class="mb-3">
+              <label for="beschreibungInput" class="form-label">Beschreibung</label>
+              <textarea name="" class="form-control" id="beschreibungInput" cols="30" rows="5"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="autorInput" class="form-label">Autor*in</label>
+              <input type="text" class="form-control" id="autorInput">
+            </div>
+            <div class="mb-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Kategorie
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a id="dropdown-privat" class="dropdown-item" href="#">Privat</a></li>
+                  <li><a id="dropdown-schule" class="dropdown-item" href="#">Schule</a></li>
+                  <li><a id="dropdown-ferien" class="dropdown-item" href="#">Ferien</a></li>
+                  <li><a id="dropdown-einkaufen" class="dropdown-item" href="#">Einkaufen</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="fortschrittInput" class="form-label">Fortschritt</label>
+              <input type="range" class="form-range" id="fortschrittInput">
+            </div>
+            <div class="mb-3">
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 75%">75%
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input class="form-check-input" type="checkbox" value="" aria-label="wichtigInput">
+              <label class="form-check-label">Wichtig</label>
+              <br>
+              <input class="form-check-input" type="checkbox" value="" aria-label="dringendInput">
+              <label class="form-check-label">Dringend</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schliessen</button>
+            <button type="submit" id="add" class="btn btn-primary">Hinzufügen</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <h5 class="text-center my-3">Aufgaben</h5>
+
+    <div id="tasks">
+
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
