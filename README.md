@@ -1,2 +1,2 @@
-# DemoGit
-Ein Demo Repository für Git
+# To-Do App
+Eine Javascript To-Do App
