@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
   margin: 0 50px;
-  background-color: #f2ebfb;
+  background-color: #f0f6ff;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ body {
   background-color: #f8f8f8;
   width: 400px;
   height: 600px;
-  border: 5px solid #9667e0;
+  border: 5px solid #0d6efd;
   border-radius: 15px;
   padding: 15px;
   overflow-y: scroll;
@@ -27,17 +27,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #d4bbfc;
+  background-color: #b5d3ff;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.fa-plus {
-  color: #f8f8f8;
-  background-color: #9667e0;
-  padding: 3px;
-  border-radius: 3px;
+.bi-plus-square-fill:hover {
+  color: #0d6efd;
+}
+
+.bi-trash:hover {
+  color: red;
+}
+
+.bi-pencil-square:hover {
+  color: #0d6efd;
 }
 
 #tasks {
@@ -47,8 +52,8 @@ body {
 }
 
 #tasks .task-card {
-  border: 3px solid #9667e0;
-  background-color: #d4bbfc;
+  border: 3px solid #0d6efd;
+  background-color: #b5d3ff;
   border-radius: 10px;
   padding: 5px;
   display: grid;
@@ -69,50 +74,15 @@ body {
   color: red;
 }
 
-.modal-content {
-  background-color: #f2ebfb;
-}
-
 .list-group-item {
-  background-color: #d4bbfc;
-  border-color: #9667e0;
+  background-color: #b5d3ff;
+  border-color: #0d6efd;
 }
 
-/* Dropdown */
-
-
-#dropdown-privat {
-  background-color: #FF8080;
+.icon-clock {
+  color: red;
 }
 
-#dropdown-privat:hover{
-  background-color: #cf6a6a;
-
-}
-
-#dropdown-schule {
-  background-color: #FFCF96;
-}
-
-#dropdown-schule:hover{
-  background-color: #cfb36a;
-
-}
-
-#dropdown-ferien {
-  background-color: #F6FDC3;
-}
-
-#dropdown-ferien:hover{
-  background-color: #d4dca3;
-
-}
-
-#dropdown-einkaufen {
-  background-color: #CDFAD5;
-}
-
-#dropdown-einkaufen:hover{
-  background-color: #b4dcbf;
-
+.icon-exclamation {
+  color: orange;
 }
